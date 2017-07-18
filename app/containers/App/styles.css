@@ -1,0 +1,18 @@
+/**
+ * styles.css
+ *
+ * App container styles
+ */
+
+ .container {
+   display: block;
+ }
+
+ body {
+   font-family: Roboto;
+   background-color: #eeeeee;
+ }
+
+ * {
+   box-sizing: border-box;
+ }

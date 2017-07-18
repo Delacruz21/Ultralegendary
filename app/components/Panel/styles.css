@@ -1,0 +1,11 @@
+.panelTitle { /* stylelint-disable */
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  text-align: center;
+}
+
+.content {
+  font-size: 18px;
+  text-align: center;
+}

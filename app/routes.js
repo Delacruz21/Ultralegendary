@@ -61,6 +61,29 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
+      childRoutes: [
+        {
+          path: '/about/modal/:link',
+          name: 'modalContainer',
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/ModalContainer/reducer'),
+              System.import('containers/ModalContainer/sagas'),
+              System.import('containers/ModalContainer'),
+            ]);
+
+            const renderRoute = loadModule(cb);
+
+            importModules.then(([reducer, sagas, component]) => {
+              injectReducer('modalContainer', reducer.default);
+              injectSagas('modalContainer', sagas.default);
+              renderRoute(component);
+            });
+
+            importModules.catch(errorLoading);
+          },
+        },
+      ],
     }, {
       path: '/skills',
       name: 'skillsContainer',

@@ -4,4 +4,4 @@
  *
  */
 
-export const TOGGLE_MODAL = 'app/AboutContainer/TOGGLE_MODAL';
+export const START_MODAL = 'app/AboutContainer/START_MODAL';

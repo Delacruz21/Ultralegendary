@@ -5,11 +5,13 @@
  */
 
 import {
-  TOGGLE_MODAL,
+  START_MODAL,
 } from './constants';
 
-export function toggleModal() {
+
+export function startModal(link) {
   return {
-    type: TOGGLE_MODAL,
+    type: START_MODAL,
+    link,
   };
 }

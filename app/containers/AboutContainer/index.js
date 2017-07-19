@@ -8,9 +8,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import selectAboutContainer from './selectors';
 import About from '../../components/About';
-import { toggleModal } from './actions';
+import { startModal } from './actions';
 
 export class AboutContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  static propTypes = {
+    children: React.PropTypes.element,
+  }
   render() {
     return (
       <div className="container-fluid">
@@ -24,7 +27,7 @@ const mapStateToProps = selectAboutContainer();
 
 function mapDispatchToProps(dispatch) {
   return {
-    toggleModal: () => dispatch(toggleModal()),
+    startModal: (link) => dispatch(startModal(link)),
   };
 }
 

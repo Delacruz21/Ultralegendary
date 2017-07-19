@@ -6,17 +6,17 @@
 
 import { fromJS } from 'immutable';
 import {
-  TOGGLE_MODAL,
+  START_MODAL,
 } from './constants';
 
 const initialState = fromJS({
-  isModalOpen: false,
+  link: '',
 });
 
 function aboutContainerReducer(state = initialState, action) {
   switch (action.type) {
-    case TOGGLE_MODAL:
-      return state.set('isModalOpen', !state.get('isModalOpen'));
+    case START_MODAL:
+      return state.set('link', action.link);
     default:
       return state;
   }

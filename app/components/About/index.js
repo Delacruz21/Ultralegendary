@@ -11,7 +11,7 @@ import classNames from 'classnames';
 
 import styles from './styles.css';
 
-function About({ toggleModal, isModalOpen }) {
+function About({ children, startModal }) {
   return (
     <div className="container">
       <nav className="navbar navbar-default navbar-fixed-top">
@@ -51,8 +51,7 @@ function About({ toggleModal, isModalOpen }) {
                     url={'https://s3.amazonaws.com/h2odealer-portal/UL/gwbridge.jpg'}
                     alt="George Washington Bridge"
                     width={'230'}
-                    toggleModal={toggleModal}
-                    isModalOpen={isModalOpen}
+                    onClick={() => startModal(1)}
                   />
                   <div className="caption">
                     <p>George Washington Bridge</p>
@@ -66,8 +65,7 @@ function About({ toggleModal, isModalOpen }) {
                     url={'https://s3.amazonaws.com/h2odealer-portal/UL/brookylnbotanicalgarden.jpg'}
                     alt="Brooklyn Botanical Garden"
                     width={'230'}
-                    toggleModal={toggleModal}
-                    isModalOpen={isModalOpen}
+                    onClick={() => startModal(2)}
                   />
                   <div className="caption">
                     <p>Brooklyn Botanical Garden</p>
@@ -81,8 +79,7 @@ function About({ toggleModal, isModalOpen }) {
                     url={'https://s3.amazonaws.com/h2odealer-portal/UL/onworldtopview.jpg'}
                     alt="One World Observatory Top View"
                     width={'230'}
-                    toggleModal={toggleModal}
-                    isModalOpen={isModalOpen}
+                    onClick={() => startModal(3)}
                   />
                   <div className="caption">
                     <p>One World Observatory Top View</p>
@@ -90,6 +87,7 @@ function About({ toggleModal, isModalOpen }) {
                 </div>
               </div>
             </div>
+            {children}
           </div>
         </div>
       </div>
@@ -98,8 +96,8 @@ function About({ toggleModal, isModalOpen }) {
 }
 
 About.propTypes = {
-  toggleModal: React.PropTypes.func,
-  isModalOpen: React.PropTypes.bool,
+  startModal: React.PropTypes.func,
+  children: React.PropTypes.element,
 };
 
 export default About;

@@ -1,3 +1,12 @@
 .skills { /* stylelint-disable */
+  padding-top: 50px;
+}
 
+.centerDiv {
+  float: none;
+  margin: 0 auto;
+}
+
+.anchor {
+  cursor: pointer;
 }

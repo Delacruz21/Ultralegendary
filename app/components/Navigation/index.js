@@ -21,7 +21,7 @@ function Navigation() {
         panelHeading="Welcome! My name is Michael De La Cruz"
         panelContent="I hope to give you an insight into my work, knowledge, and interests. Having this site allows me to express myself using HTML5, CSS3, and JavaScript"
         panelQuote="Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind."
-        quoteAuthor="Dr. Suess"
+        quoteAuthor="Dr. Seuss"
       />
     </div>
   );

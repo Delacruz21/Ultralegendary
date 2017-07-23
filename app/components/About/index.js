@@ -30,7 +30,7 @@ function About({ children, startModal }) {
               </h4><br />
               <p>Need more information about me. Please Contact Me!</p><br />
               <div className={styles.button}>
-                <button className="btn btn-default btn-lg">Get in Touch</button>
+                <button onClick={() => { window.location.href = '/contact'; }} className="btn btn-default btn-lg">Get in Touch</button>
               </div>
             </div>
             <div className="col-sm-4 text-center">
@@ -44,7 +44,7 @@ function About({ children, startModal }) {
             <div className={classNames('clearfix', styles.clear)}></div>
             <div className="row text-center">
               <h2 className={styles.imgheadline}>View some of my Cool Images!</h2>
-              <div className={classNames('col-md-4', 'text-center', styles.thumbnail)}>
+              <div className={classNames('col-md-4', 'col-sm-6', 'text-center', styles.thumbnail)}>
                 <div className="thumbnail">
                   <Image
                     className="img-responsive"
@@ -58,7 +58,7 @@ function About({ children, startModal }) {
                   </div>
                 </div>
               </div>
-              <div className={classNames('col-md-4', 'text-center', styles.thumbnail)}>
+              <div className={classNames('col-md-4', 'col-sm-6', 'text-center', styles.thumbnail)}>
                 <div className="thumbnail">
                   <Image
                     className="img-responsive"
@@ -72,7 +72,7 @@ function About({ children, startModal }) {
                   </div>
                 </div>
               </div>
-              <div className={classNames('col-md-4', 'text-center', styles.thumbnail)}>
+              <div className={classNames('col-md-4', 'col-sm-6', 'text-center', styles.thumbnail)}>
                 <div className="thumbnail">
                   <Image
                     className="img-responsive"

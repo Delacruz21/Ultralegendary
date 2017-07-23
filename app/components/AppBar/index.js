@@ -23,11 +23,11 @@ function AppBar() {
         </div>
         <div className="collapse navbar-collapse" id="myNavbar">
           <ul className="nav navbar-nav navbar-right">
-            <li className=""><a href="/about">ABOUT</a></li>
+            <li><a href="/about">ABOUT</a></li>
             <li><a href="/skills">SKILLS</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="/projects">PROJECTS</a></li>
             <li><a href="/comments">COMMENTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
         </div>
       </div>

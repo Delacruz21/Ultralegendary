@@ -41,6 +41,29 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
+      childRoutes: [
+        {
+          path: '/signup',
+          name: 'signupContainer',
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/SignupContainer/reducer'),
+              System.import('containers/SignupContainer/sagas'),
+              System.import('containers/SignupContainer'),
+            ]);
+
+            const renderRoute = loadModule(cb);
+
+            importModules.then(([reducer, sagas, component]) => {
+              injectReducer('signupContainer', reducer.default);
+              injectSagas('signupContainer', sagas.default);
+              renderRoute(component);
+            });
+
+            importModules.catch(errorLoading);
+          },
+        },
+      ],
     }, {
       path: '/about',
       name: 'aboutContainer',
@@ -99,6 +122,66 @@ export default function createRoutes(store) {
         importModules.then(([reducer, sagas, component]) => {
           injectReducer('skillsContainer', reducer.default);
           injectSagas('skillsContainer', sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
+      path: '/comments',
+      name: 'commentsContainer',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/CommentsContainer/reducer'),
+          System.import('containers/CommentsContainer/sagas'),
+          System.import('containers/CommentsContainer'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('commentsContainer', reducer.default);
+          injectSagas('commentsContainer', sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
+      path: '/contact',
+      name: 'contactContainer',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/ContactContainer/reducer'),
+          System.import('containers/ContactContainer/sagas'),
+          System.import('containers/ContactContainer'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('contactContainer', reducer.default);
+          injectSagas('contactContainer', sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
+      path: '/projects',
+      name: 'projectsContainer',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/ProjectsContainer/reducer'),
+          System.import('containers/ProjectsContainer/sagas'),
+          System.import('containers/ProjectsContainer'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('projectsContainer', reducer.default);
+          injectSagas('projectsContainer', sagas.default);
           renderRoute(component);
         });
 

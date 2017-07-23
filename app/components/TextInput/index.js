@@ -14,10 +14,8 @@ class TextInput extends React.Component { // eslint-disable-line react/prefer-st
     return this.field.value;
   }
 
-
   render() {
     const { errorText } = this.props;
-
     const fieldError = errorText ? (
       <div
         className={styles.errorMessage}
@@ -25,7 +23,6 @@ class TextInput extends React.Component { // eslint-disable-line react/prefer-st
         {errorText}
       </div>
     ) : null;
-
     return (
       <div>
         <input

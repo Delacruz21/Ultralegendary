@@ -68,7 +68,7 @@ class Skills extends React.Component { // eslint-disable-line react/prefer-state
           <div id="skills" className="container">
             <div className="row text-center">
               <h1><code>Check Out My Skills!</code></h1>
-              <div className={classNames(styles.centerDiv, 'col-xs-12', 'col-md-8')}>
+              <div className={classNames(styles.centerDiv, 'col-xs-12', 'col-md-6')}>
                 <TextInput
                   className={styles.input}
                   placeholder="Search for my skills"

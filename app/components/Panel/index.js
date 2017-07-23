@@ -10,6 +10,14 @@ import React from 'react';
 import styles from './styles.css';
 
 function Panel({ panelHeading, panelContent, panelQuote, quoteAuthor }) {
+  // check if blockquote is needed
+  const quote = panelQuote ?
+    (<blockquote className="text-center">
+      <p>{panelQuote}</p>
+      <footer>{quoteAuthor}</footer>
+    </blockquote>)
+  : null;
+
   return (
     <div className={styles.panel}>
       <div className="panel panel-default">
@@ -20,10 +28,7 @@ function Panel({ panelHeading, panelContent, panelQuote, quoteAuthor }) {
         </div>
         <div className="panel-body">
           <p className={styles.content}>{panelContent}</p>
-          <blockquote className="text-center">
-            <p>{panelQuote}</p>
-            <footer>{quoteAuthor}</footer>
-          </blockquote>
+          { quote }
         </div>
       </div>
     </div>

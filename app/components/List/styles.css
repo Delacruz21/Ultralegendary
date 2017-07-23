@@ -1,0 +1,10 @@
+.list { /* stylelint-disable */
+background: #fff;
+border-style: groove;
+border-color: red;
+}
+
+.centerDiv {
+  float: none;
+  margin: 0 auto;
+}

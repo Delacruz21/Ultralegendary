@@ -37,7 +37,7 @@ class Jumbotron extends React.Component {
   displaySignedIn() {
     return (
       <div>
-        <p>Hi, <span style={{ textTransform: 'lowercase', color: 'red', background: 'lightblue' }}>{this.props.email}</span> and
+        <p><h2>Hi,</h2> <span style={{ textTransform: 'lowercase', color: 'red', background: 'lightblue' }}>{this.props.email}</span> and
           Thanks for checking out my site!
         </p>
         <p><var>I used reselect to combine selectors and took email held in state set by redux

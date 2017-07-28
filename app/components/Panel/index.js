@@ -36,8 +36,8 @@ function Panel({ panelHeading, panelContent, panelQuote, quoteAuthor }) {
 }
 
 Panel.propTypes = {
-  panelHeading: React.PropTypes.string.isRequired,
-  panelContent: React.PropTypes.string.isRequired,
+  panelHeading: React.PropTypes.string,
+  panelContent: React.PropTypes.string,
   panelQuote: React.PropTypes.string,
   quoteAuthor: React.PropTypes.string,
 };

@@ -8,8 +8,14 @@ import {
   REQUEST_COMMENTS,
   REQUEST_COMMENTS_SUCCEEDED,
   REQUEST_COMMENTS_FAILED,
+  START_ADD_COMMENT,
 } from './constants';
 
+export function startAddComment() {
+  return {
+    type: START_ADD_COMMENT,
+  };
+}
 // action for requesting comments
 export function requestComments() {
   return {

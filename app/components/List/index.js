@@ -6,24 +6,29 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import Panel from '../Panel';
 import styles from './styles.css';
+import Panel from '../Panel';
 
-function List({ panelHeading, panelContent }) {
+function List({ items }) {
+  const itemNodes = items.map(item => (
+    <li
+      key={item.id}
+      className="list-group-item"
+    >
+      <Panel
+        key={item.id}
+        panelHeading={item.name}
+        panelContent={item.comment}
+      />
+    </li>
+  ));
   return (
     <div className="container">
       <div className={styles.list}>
         <div className="row">
-          <h3>Comments</h3>
-          <hr />
           <div className={classNames(styles.centerDiv, 'col-xs-12', 'col-md-12')}>
             <ul className="list-group">
-              <li className="list-group-item">
-                <Panel
-                  panelHeading={panelHeading}
-                  panelContent={panelContent}
-                />
-              </li>
+              {itemNodes}
             </ul>
           </div>
         </div>
@@ -33,6 +38,7 @@ function List({ panelHeading, panelContent }) {
 }
 
 List.propTypes = {
+  items: React.PropTypes.array.isRequired,
   panelHeading: React.PropTypes.string,
   panelContent: React.PropTypes.string,
 };

@@ -6,7 +6,7 @@
 
 import React from 'react';
 import AppBar from '../AppBar';
-import Image from '../Image'
+import Image from '../Image';
 import styles from './styles.css';
 
 function Projects() {
@@ -43,7 +43,7 @@ function Projects() {
               <h4>H2O Email Platform</h4>
               <p> - This project was in an effort to send marketing emails and to improve our delivery rate for transactional emails by using Amazon SES.
                 The project entitled me to configure the domain on amazon route 53 and using an EC2 instance to host the site while using SES to send emails.
-                Also, setup a mysql instance on amazon RDS, which I maintain to store transactions/marketing emails sent and to prevent resending to hard bounced emails.</p>
+              Also, setup a mysql instance on amazon RDS, which I maintain to store transactions/marketing emails sent and to prevent resending to hard bounced emails.</p>
             </div>
           </div>
         </div>

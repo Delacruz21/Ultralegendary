@@ -24,3 +24,8 @@
 .button {
   font-size: 24px;
 }
+
+.imgcontact {
+  max-height: 90%;
+  max-width: 90%;
+}

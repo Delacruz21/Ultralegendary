@@ -10,6 +10,7 @@ import TextInput from '../TextInput';
 import styles from './styles.css';
 import classNames from 'classnames';
 import validator from 'email-validator';
+import Image from '../Image';
 
 class Contact extends React.Component { // eslint-disable-line react/prefer-stateless-function
   state = {
@@ -95,6 +96,12 @@ class Contact extends React.Component { // eslint-disable-line react/prefer-stat
                 </form>
               </div>
               <div className="hidden-xs col-md-6">
+                <Image
+                  imageClass={classNames('img-responsive', 'col-xs-12', styles.imgcontact)}
+                  url="https://s3.amazonaws.com/h2odealer-portal/UL/me.png"
+                  alt="Me"
+                  height="300"
+                />
                 <div>
                 </div>
               </div>

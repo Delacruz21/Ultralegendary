@@ -4,13 +4,13 @@
  * App container styles
  */
 
- .container {
+ .container { /* stylelint-disable */
    display: block;
  }
 
  body {
    font-family: Roboto;
-   background-color: #eeeeee;
+   background-color: #EEEEEE;
  }
 
  * {

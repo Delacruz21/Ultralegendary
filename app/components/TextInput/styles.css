@@ -1,20 +1,20 @@
-.errorMessage {
-  color: #ce1313;
+.errorMessage { /* stylelint-disable */
+  color: #CE1313;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 14px;
 }
 
 .inputError {
-  border-bottom-color: #ce1313;
+  border-bottom-color: #CE1313;
 }
 
 .input {
-  background: #f8f8f8;
+  background: #F8F8F8;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  padding:5px;
+  padding: 5px;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -22,8 +22,8 @@
   font-size: 18px;
 
   &:focus {
-      outline: none;
-      border-bottom-color: #00afcc;
-      border-bottom-width: 2px;
+    outline: none;
+    border-bottom-color: #00AFCC;
+    border-bottom-width: 2px;
   }
 }

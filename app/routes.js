@@ -147,6 +147,29 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
+      childRoutes: [
+        {
+          path: '/comments/add',
+          name: 'commentFormContainer',
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/CommentFormContainer/reducer'),
+              System.import('containers/CommentFormContainer/sagas'),
+              System.import('containers/CommentFormContainer'),
+            ]);
+
+            const renderRoute = loadModule(cb);
+
+            importModules.then(([reducer, sagas, component]) => {
+              injectReducer('commentFormContainer', reducer.default);
+              injectSagas('commentFormContainer', sagas.default);
+              renderRoute(component);
+            });
+
+            importModules.catch(errorLoading);
+          },
+        },
+      ],
     }, {
       path: '/contact',
       name: 'contactContainer',
